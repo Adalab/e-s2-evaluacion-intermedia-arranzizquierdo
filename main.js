@@ -11,8 +11,8 @@ function getRandomNumber(max) {
 let randomNumber = getRandomNumber(100); 
 console.log(getRandomNumber(100));
 function clickNumber() {
-    let numberSelect = parseInt(numberElement.value);
-    if (randomNumber === numberSelect) {
+
+    if (randomNumber === parseInt(numberElement.value) {
         resultElement.innerHTML = "HAS GANADO, CAMPEONA!";
     } else {
         
