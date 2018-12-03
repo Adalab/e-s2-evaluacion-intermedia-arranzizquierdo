@@ -10,16 +10,19 @@ function getRandomNumber(max) {
 
 let randomNumber = getRandomNumber(100); 
 console.log(getRandomNumber(100));
-function clickNumber() {
 
-    if (randomNumber === parseInt(numberElement.value) {
+function handleButtonClick() {
+    const inputNumber = parseInt(numberElement.value);
+
+    if (randomNumber === inputNumber) {
         resultElement.innerHTML = "HAS GANADO, CAMPEONA!";
+    } else if (inputNumber > randomNumber) {
+        resultElement.innerHTML = "demasiado alto";
     } else {
-        
+        resultElement.innerHTML = "demasiado bajo";
     }
-
 }
-buttonElement.addEventListener('click', clickNumber);
+buttonElement.addEventListener('click', handleButtonClick);
 
 
 
