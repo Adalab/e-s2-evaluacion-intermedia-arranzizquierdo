@@ -1,3 +1,49 @@
 body {
-    background-color: rgb(197, 190, 190);
+    background-color: rgb(224, 217, 217);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px;
+    position: relative;
+}
+
+.tittle {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.container__number {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    margin: auto;
+}
+
+.result {
+    border: 1px solid blue;
+    color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-top: 100px;
+}
+
+#number {
+    margin: 30px 0 30px 0;
+    height: 30px;
+    width: 100%;
+}
+
+.button {
+    height: 20px;
+    width: 100%;
+}
+
+.counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: red;
+    font-size: 60px;
 }

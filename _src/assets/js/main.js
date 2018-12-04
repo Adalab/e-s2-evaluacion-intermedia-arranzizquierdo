@@ -3,26 +3,37 @@
 const numberElement = document.querySelector('#number');
 const buttonElement = document.querySelector('.button');
 const resultElement = document.querySelector('.result');
+const counterElement = document.querySelector('.counter');
+let counter = 0;
+
+function printCounter () {
+    counterElement.innerHTML = counter;
+}
 
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
-  }
+}
 
-let randomNumber = getRandomNumber(100); 
-console.log(getRandomNumber(100));
+let randomNumber = getRandomNumber(100);
+console.log('Random number =>', getRandomNumber(100));
 
-function handleButtonClick() {
+function handleButtonClick(event) {
+    event.preventDefault();
     const inputNumber = parseInt(numberElement.value);
+    console.log('Número seleccionado =>', inputNumber);
 
-    if (randomNumber === inputNumber) {
+    if (inputNumber === randomNumber) {
         resultElement.innerHTML = "HAS GANADO, CAMPEONA!";
     } else if (inputNumber > randomNumber) {
         resultElement.innerHTML = "demasiado alto";
     } else {
         resultElement.innerHTML = "demasiado bajo";
     }
+
+    counter = counter + 1;
+    printCounter();
 }
 buttonElement.addEventListener('click', handleButtonClick);
-
+printCounter();
 
 
