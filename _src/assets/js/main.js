@@ -15,7 +15,7 @@ function getRandomNumber(max) {
 }
 
 let randomNumber = getRandomNumber(100);
-console.log('Random number =>', getRandomNumber(100));
+console.log('Random number =>', randomNumber);
 
 function handleButtonClick(event) {
     event.preventDefault();
